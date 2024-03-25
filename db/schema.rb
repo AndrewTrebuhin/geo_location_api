@@ -10,9 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_03_22_160942) do
+ActiveRecord::Schema[7.1].define(version: 2024_03_22_204207) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "addressables", force: :cascade do |t|
+    t.string "address", null: false
+    t.bigint "location_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["address"], name: "index_addressables_on_address", unique: true
+    t.index ["location_id"], name: "index_addressables_on_location_id"
+  end
 
   create_table "locations", force: :cascade do |t|
     t.float "latitude", null: false
@@ -29,4 +38,5 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_22_160942) do
     t.index ["latitude", "longitude"], name: "index_locations_on_latitude_and_longitude"
   end
 
+  add_foreign_key "addressables", "locations"
 end
