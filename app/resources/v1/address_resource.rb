@@ -13,6 +13,8 @@ module V1
                             :state, :state_code, :city, :postal_code)
     end
 
+    filters :address
+
     before_save do
       find_or_create_location if location_id.nil?
     end
