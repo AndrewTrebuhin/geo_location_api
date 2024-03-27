@@ -4,9 +4,8 @@ class Location::Upserter
   end
 
   def call
-    Location.find_or_initialize_by(@attrs.slice(:latitude, :longitude)) do |loc|
-      loc.assign_attributes(@attrs)
-      loc.save
-    end
+    location = Location.find_or_initialize_by(@attrs.slice(:latitude, :longitude))
+    location.update(@attrs) if location.new_record?
+    location
   end
 end
