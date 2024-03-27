@@ -1,0 +1,282 @@
+{
+	"info": {
+		"_postman_id": "7e3e3c1c-d845-4046-a888-7e0a28867b85",
+		"name": "API V1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3007129"
+	},
+	"item": [
+		{
+			"name": "locations",
+			"item": [
+				{
+					"name": "index",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_domain}}/locations",
+							"host": [
+								"{{api_domain}}"
+							],
+							"path": [
+								"locations"
+							],
+							"query": [
+								{
+									"key": "page[size]",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "page[number]",
+									"value": "1",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_domain}}/locations/1",
+							"host": [
+								"{{api_domain}}"
+							],
+							"path": [
+								"locations",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{api_domain}}/locations/0",
+							"host": [
+								"{{api_domain}}"
+							],
+							"path": [
+								"locations",
+								"0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "{{Content-Type}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": {\n        \"type\": \"locations\",\n        \"attributes\": {\n            \"latitude\": 43.70317077636719,\n            \"longitude\": -79.51219177246094,\n            \"city\": \"Toronto\"\n        }\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_domain}}/locations/",
+							"host": [
+								"{{api_domain}}"
+							],
+							"path": [
+								"locations",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "{{Content-Type}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": {\n        \"id\": 5,\n        \"type\": \"locations\",\n        \"attributes\": {\n            \"latitude\": 43.70317077636719,\n            \"longitude\": -79.51219177246094,\n            \"country\": \"Canada\",\n            \"country_code\": \"CA\",\n            \"state\": \"Ontario\",\n            \"state_code\": \"ON\",\n            \"city\": \"Toronto\",\n            \"postal_code\": \"M3H 6A7\",\n            \"data\": {\n                \"continent_code\": \"NA\",\n                \"continent_name\": \"North America\",\n                \"country_code\": \"CA\",\n                \"country_name\": \"Canada\",\n                \"region_code\": \"ON\",\n                \"region_name\": \"Ontario\",\n                \"city\": \"Toronto\",\n                \"zip\": \"M3H 6A7\",\n                \"latitude\": 43.70317077636719,\n                \"longitude\": -79.51219177246094,\n                \"location\": \n                {\"geoname_id\": 6167865,\n                \"capital\": \"Ottawa\",\n                \"languages\": \n                    [{\"code\": \"en\", \"name\": \"English\", \"native\": \"English\"},\n                    {\"code\": \"fr\", \"name\": \"French\", \"native\": \"Français\"}],\n                \"country_flag\": \"https://assets.ipstack.com/flags/ca.svg\",\n                \"country_flag_emoji\": \"🇨🇦\",\n                \"country_flag_emoji_unicode\": \"U+1F1E8 U+1F1E6\",\n                \"calling_code\": \"1\",\n                \"is_eu\": false}\n                }\n        }\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_domain}}/locations/5",
+							"host": [
+								"{{api_domain}}"
+							],
+							"path": [
+								"locations",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "addresses",
+			"item": [
+				{
+					"name": "index",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_domain}}/addresses",
+							"host": [
+								"{{api_domain}}"
+							],
+							"path": [
+								"addresses"
+							],
+							"query": [
+								{
+									"key": "filter[address]",
+									"value": "\"74.12.42.44\"",
+									"disabled": true
+								},
+								{
+									"key": "page[size]",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "page[number]",
+									"value": "1",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_domain}}/addresses/1",
+							"host": [
+								"{{api_domain}}"
+							],
+							"path": [
+								"addresses",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{api_domain}}/addresses/0",
+							"host": [
+								"{{api_domain}}"
+							],
+							"path": [
+								"addresses",
+								"0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "{{Content-Type}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": {\n        \"type\": \"addresses\",\n        \"attributes\": {\n            \"address\": \"50.2.40.40\",\n            \"location_id\": 1 // if location_id is null the Geolocation module would try to fetch geodata from the connected provider\n        }\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_domain}}/addresses",
+							"host": [
+								"{{api_domain}}"
+							],
+							"path": [
+								"addresses"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "Content-Type",
+			"value": "application/vnd.api+json",
+			"type": "string"
+		}
+	]
+}
