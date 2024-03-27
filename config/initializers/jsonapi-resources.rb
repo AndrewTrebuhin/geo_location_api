@@ -6,5 +6,7 @@ JSONAPI.configure do |config|
   config.default_page_size = 10
   config.maximum_page_size = 50
 
-  config.exception_class_whitelist = []
+  config.exception_class_whitelist = [
+    'Geolocation::ResponseDispather::UknownResultObjectError'
+  ]
 end

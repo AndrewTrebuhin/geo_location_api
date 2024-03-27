@@ -7,6 +7,7 @@ module V1
                :state,
                :state_code,
                :city,
-               :postal_code
+               :postal_code,
+               :data
   end
 end
