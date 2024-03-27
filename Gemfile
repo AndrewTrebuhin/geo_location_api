@@ -1,4 +1,4 @@
-source "https://rubygems.org"
+source 'https://rubygems.org'
 
 ruby '3.2.2'
 
@@ -12,8 +12,12 @@ gem 'tzinfo-data', platforms: %i[windows jruby]
 
 group :development, :test do
   gem 'dotenv'
+  gem 'factory_bot_rails'
+  gem 'faker'
   gem 'pry-rails'
+  gem 'rspec-rails'
 end
 
-group :development do
+group :test do
+  gem 'shoulda-matchers', '~> 6.0'
 end
