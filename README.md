@@ -31,7 +31,7 @@ Don't forget to set your `IPSTACK_API_KEY` in the `.env` file.
 
 ## API documentation
 
-Postman collection can be downloaded here.
+Postman collection can be downloaded [here](https://github.com/AndrewTrebuhin/geo_location_api/blob/main/api_v1_postman_collection.json).
 
 All collection endpoints are paginated, use `page[size]` and `page[number]` params.
 
@@ -43,9 +43,7 @@ For `POST|PUT|PATCH` requests `Content-Type: application/vnd.api+json` header is
 
   **Query params**
 
-  ```json
-  filter[address]
-  ```
+  `filter[address]`
 
   **Response example**
 
@@ -170,13 +168,11 @@ For `POST|PUT|PATCH` requests `Content-Type: application/vnd.api+json` header is
 
 <br>
 
-- `DELETE http://localhost:3000/v1/addresses/1`
+- `DELETE http://localhost:3000/v1/addresses/:id`
 
   **Response expample:**
 
-  ```json
-    204 No Content
-  ```
+  `204 No Content`
 
 ## Locations
 
